@@ -49,11 +49,11 @@ If you specify an invalid OpenAI key or you dont have one, the `ReceiveMessage` 
 After you have specified the OpenAI key, you will need to connect to any server with players. After connecting to the server, in order not to load the neural network (since there are restrictions on the number of requests for a certain period of time), you will need to specify the `ID` of the player whose requests the neural network will have to process. To get started, you will need to enter the `status` command, which will display information about the players, after which you will see the following result:<br>
 ```
 #      name userid uniqueid frag time ping loss adr
-# 1 "Player1" 1 STEAM_0:0:000000000   0 00:00    0    0
-# 2 "Player2" 2 STEAM_0:0:000000000   0 00:00    0    0
-# 3 "Player3" 3 STEAM_0:0:000000000   0 00:00    0    0
-# 4 "Player4" 4 STEAM_0:0:000000000   0 00:00    0    0
-# 5 "Player5" 5 STEAM_0:0:000000000   0 00:00    0    0
+# 1 "Player1" 123 STEAM_0:0:000000000   0 00:00    0    0
+# 2 "Player2" 125 STEAM_0:0:000000000   0 00:00    0    0
+# 3 "Player3" 127 STEAM_0:0:000000000   0 00:00    0    0
+# 4 "Player4" 129 STEAM_0:0:000000000   0 00:00    0    0
+# 5 "Player5" 131 STEAM_0:0:000000000   0 00:00    0    0
 5 users
 ```
 The digit after the `#` symbol is the player `ID`. Now, all you have to do is specify the `ID` of the player whose requests you want to process. You will have to enter the command `nc_ids` and the end result will look something like this: `nc_ids "5"`. If you want to process requests from several players at once, you will need to list their `IDs` separated by commas, like this: `nc_ids "1, 3, 5"`.
