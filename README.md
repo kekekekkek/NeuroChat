@@ -50,13 +50,13 @@ After you have specified the OpenAI key, you will need to connect to any server 
 ```
 #      name userid uniqueid frag time ping loss adr
 # 1 "Player1" 1 STEAM_0:0:000000000   0 00:00    0    0
-# 2 "Player2" 1 STEAM_0:0:000000000   0 00:00    0    0
-# 3 "Player3" 1 STEAM_0:0:000000000   0 00:00    0    0
-# 4 "Player4" 1 STEAM_0:0:000000000   0 00:00    0    0
-# 5 "Player5" 1 STEAM_0:0:000000000   0 00:00    0    0
+# 2 "Player2" 2 STEAM_0:0:000000000   0 00:00    0    0
+# 3 "Player3" 3 STEAM_0:0:000000000   0 00:00    0    0
+# 4 "Player4" 4 STEAM_0:0:000000000   0 00:00    0    0
+# 5 "Player5" 5 STEAM_0:0:000000000   0 00:00    0    0
 5 users
 ```
-The digit after the `#` symbol is the player `ID (userid)`. Now, all you have to do is specify the `ID` of the player whose requests you want to process. You will have to enter the command `nc_ids` and the end result will look something like this: `nc_ids "5"`. If you want to process requests from several players at once, you will need to list their `IDs` separated by commas, like this: `nc_ids "1, 3, 5"`.
+The digit after the `#` symbol is the player `ID`. Now, all you have to do is specify the `ID` of the player whose requests you want to process. You will have to enter the command `nc_ids` and the end result will look something like this: `nc_ids "5"`. If you want to process requests from several players at once, you will need to list their `IDs` separated by commas, like this: `nc_ids "1, 3, 5"`.
 
 But **REMEMBER**, it is necessary to specify identifiers in quotation marks, since this string. If you dont use quotation marks in this command or other string commands, then the result of these variables will always be the first character specified. Now, ask the specified player to write a message to the chat, and enjoy the result.<br><br>
 Also **REMEMBER** that the maximum length of a chat message is `120` characters, so in the `nc_addstr` command you can also tell the neural network that the final message should contain no more than `120` characters.
