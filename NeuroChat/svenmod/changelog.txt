@@ -1,0 +1,93 @@
+Changelog for SvenMod
+
+21/03/2023 - Version 1.2.5 (API v4.0):
+- Added asynchronous pattern search
+- Added delayed load of plugins
+
+11/03/2023 - Version 1.2.4 (API v4.0):
+- Updated math functions
+- Added QAngle and Quaternion classes
+- Added macro 'SVENMOD_DEBUG'
+- Added WeaponId 'WEAPON_CROWBAR_ELECTRIC'
+- Removed dynamic_cast on 'ConCommandBase'
+- Fixed 'msurface_s' structure
+- Fixed wrong read & write of coords in 'CMessageBuffer'
+- Fixed wrong definition of macro 'CHAR_TEX_SNOW'
+
+25/01/2023 - Version 1.2.3 (API v4.0):
+- Renamed fieldtypes
+- Removed some methods of the interface 'IEngineClient' for game version 5.22
+- Added macro to define multiple patterns, see 'memutils/patterns.h'
+- Added inline function 'FindPattern' in the interface 'IMemoryUtils' to look over multiple patterns
+- Added a missing pattern for version 5.22
+- Fixed incorrect get of the struct 'r_studio_interface_t'
+
+17/11/2022 - Version 1.2.2 (API v4.0):
+- Used macro M_ARRAYSIZE
+- Used variable 'realtime' instead of function 'g_pEngineFuncs->GetClientTime' in the interface 'IRender'
+- Fixed crash in main menu when called method IUtils::PrintChatText
+
+06/11/2022, 14/11/2022 - Version 1.2.1 (API v4.0):
+- As always some improvements in the code
+- Project configurations for game version 5.22 (<3), 5.25 and Newest
+- New 'IRender' interface
+- Updated sample plugin
+- Fixed wrong pad in class 'CGameConsoleDialog'
+- Fixed completely wrong struct 'extra_player_info_t'
+- Fixed incorrect method 'Reject' in Vector class
+- Added new methods for 'IClientPlugin' interface
+- Added symbol signatures for Linux
+- Added methods 'HookCvarChange' and 'HookEvent' (EventHook) for interface 'IHooks'
+- Added methods 'ApplyReadToNetMessageBuffer', 'FindEventHook' and 'PrintChatText' for interface 'IUtils'
+- Added methods 'GetCvarPointer' and 'GetCmdPointer' in convar.h
+- Added more methods and constructors for 'Color' class
+- Added math functions 'VectorRotate', 'VectorITransform' and 'VectorIRotate'
+- Used better parser of keyvalues
+
+03/05/2022, 11/07/2022 - Version 1.2.0 (API v3.0):
+- Minor improvements in the code
+- Added CMake, scripts for building on Windows/Linux (Linux project is not finished, and probably won't be finished lol)
+- Added Linux equivalents for WinAPI functions
+- Added 'Drop' method for interface 'IClientWeapon'
+- Added 'DrawSetTextColor' method for interface 'IUtils'
+- Added 'VirtualProtect', 'VirtualAlloc' and 'VirtualFree' methods for interface 'IMemoryUtils'
+- Added headers 'hl_sdk/common/protocol.h', 'svenmod.h'
+- Updated header 'platform.h'
+- Fixed include of header 'mathlib.h'
+- Replaced function '_snprintf' to 'snprintf'
+- Replaced keyword '__forceinline' to macro 'FORCEINLINE' in hash map, hash table and hash dictionary
+- Added file header 'sizebuf.h'
+- Added several methods in 'IClient' interface
+- Added support to hook network messages
+- Added class 'CMessageBuffer' for reading or writing network/user messages
+- Added method 'FindPatternWithin' in interface 'IMemoryUtils'
+- Added methods 'GetNetMessageParams', 'FindNetworkMessage', 'FindUserMessage' in interface 'IUtils'
+- Removed method 'IsValidSteam64ID' from interface 'IUtils' (doesn't work correctly)
+- All patterns moved in separate files: 'patterns.h' and 'patterns.cpp'
+- All lookup stuff to find game functions, variables moved in separate files: 'gamedata_finder.h' and 'gamedata_finder.cpp'
+- The console command 'sm printcvars <arg>..' now sorts Cvars and ConCommands
+- Updated failure messages when SvenMod's and plugin's API are different
+
+21/03/2022 - Version 1.1.0 (API v2.0):
+- Added IClient, IClientWeapon and IUtils interfaces
+- Added pointer to engine's variable "r_refdef_time"
+- Removed interface version from IPlayerUtils.h
+- Removed virtual "Init" functions from some interfaces
+- Renamed "client_hooks_handler" source files to "game_hooks"
+- Fixed file's cl_entity.h header
+- Some fixes in manager of plugins
+
+20/03/2022 - Version 1.0.1 (API v1.0):
+- Added several includes to Half-Life SDK headers
+- Added a few console commands: toggle, incrementvar, multvar
+- Added search syntax (control cmd "?") for command "sm printcvars"
+- Auto execution of file "svenmod.cfg" on load of SvenMod
+- Removed "v" from SvenMod's message about successful load
+- Fixed incorrect signature for protocol's version
+- Changed call priority for PaintTraverse hook
+- Updated features to pause/unpause them, fixed incorrect use linked list
+- convar.h: fixed naming of function in utility macros to create ConCommands
+- convar.cpp: removed call of imported function "SvenModAPI"
+
+18/03/2022 - Version 1.0.0 (API v1.0):
+- Release
