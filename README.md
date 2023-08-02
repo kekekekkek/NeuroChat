@@ -46,7 +46,7 @@ Your end result should look something like this: `nc_setkey sk-7pgTYp1fYhDqGRTTU
 
 If you specify an invalid OpenAI key or you dont have one, the `ReceiveMessage` function will return the error message `Failed to extract the message.`. Also, this function can return the value `Failed to extract the message.` if the final request or response contains utf-8 characters. Also, this function may return an error message if your `nc_temperature` parameter was greater than `1.0` or less than `0.0`.
 
-After you have specified the OpenAI key, you will need to connect to any server with players. After connecting to the server, in order not to load the neural network (since there are restrictions on the number of requests for a certain period of time), you will need to specify the `ID` of the player whose requests the neural network will have to process. To get started, you will need to enter the `status` command, which will display information about the players, after which you will see the following result:<br>
+After you have specified the OpenAI key, you will need to connect to any server with players. After connecting to the server, in order not to load the neural network (since there are restrictions on the number of requests for a certain period of time), you will need to specify the `EntIndex` of the player whose requests the neural network will have to process. To get started, you will need to enter the `status` command, which will display information about the players, after which you will see the following result:<br>
 ```
 #      name userid uniqueid frag time ping loss adr
 # 1 "Player1" 123 STEAM_0:0:000000000   0 00:00    0    0
@@ -56,7 +56,7 @@ After you have specified the OpenAI key, you will need to connect to any server 
 # 5 "Player5" 131 STEAM_0:0:000000000   0 00:00    0    0
 5 users
 ```
-The digit after the `#` symbol is the player `ID`. Now, all you have to do is specify the `ID` of the player whose requests you want to process. You will have to enter the command `nc_ids` and the end result will look something like this: `nc_ids "5"`. If you want to process requests from several players at once, you will need to list their `IDs` separated by commas, like this: `nc_ids "1, 3, 5"`.
+The digit after the `#` symbol is the player `EntIndex`. Now, all you have to do is specify the `EntIndex` of the player whose requests you want to process. You will have to enter the command `nc_ids` and the end result will look something like this: `nc_ids "5"`. If you want to process requests from several players at once, you will need to list their `EntIndexes` separated by commas, like this: `nc_ids "1, 3, 5"`.
 
 But **REMEMBER**, it is necessary to specify identifiers in quotation marks, since this string. If you dont use quotation marks in this command or other string commands, then the result of these variables will always be the first character specified. Now, ask the specified player to write a message to the chat, and enjoy the result.<br><br>
 Also **REMEMBER** that the maximum length of a chat message is `120` characters, so in the `nc_addstr` command you can also tell the neural network that the final message should contain no more than `120` characters.
@@ -84,7 +84,7 @@ After you have changed any variable values in the console, you will need to ente
 * Also, there are no checks in the plugin for those things that can cause malfunctions in the game;
 * Failures can also occur if you fill in the `Config.ini` file incorrectly or specify incorrect values in it;
 * The interval between requests should be around 2-5 seconds. Or, you will receive the error `Failed to extract the message`;
-* If the player you allowed to send requests to the neural network is at number `2`, then by connecting to another server, another person may become the player at number `2`, keep this in mind, because the plugin doesnt reset the current `IDs` after disconnecting from the server.
+* If the player you allowed to send requests to the neural network is at number `2`, then by connecting to another server, another person may become the player at number `2`, keep this in mind, because the plugin doesnt reset the current `EntIndexes` after disconnecting from the server.
 
 # Compile
 Build type: `Release/x86`<br>
