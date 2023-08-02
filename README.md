@@ -46,7 +46,7 @@ Your end result should look something like this: `nc_setkey sk-7pgTYp1fYhDqGRTTU
 
 If you specify an invalid OpenAI key or you dont have one, the `ReceiveMessage` function will return the error message `Failed to extract the message.`. Also, this function can return the value `Failed to extract the message.` if the final request or response contains utf-8 characters. Also, this function may return an error message if your `nc_temperature` parameter was greater than `1.0` or less than `0.0`.
 
-After you have specified the OpenAI key, you will need to connect to any server with players. After connecting to the server, in order not to load the neural network (since there are restrictions on the number of requests for a certain period of time), you will need to specify the `Index` of the player whose requests the neural network will have to process. To get started, you will need to enter the `status` command, which will display information about the players, after which you will see the following result:<br>
+After you have specified the OpenAI key, you will need to connect to any server with players. After connecting to the server, in order not to overload the neural network (since there are restrictions on the number of requests for a certain period of time), you will need to specify the `Index` of the player whose requests the neural network will have to process. To get started, you will need to enter the `status` command, which will display information about the players, after which you will see the following result:<br>
 ```
 #      name userid uniqueid frag time ping loss adr
 # 1 "Player1" 123 STEAM_0:0:000000000   0 00:00    0    0
