@@ -4,7 +4,7 @@ Well, is it time to turn the 1998 game into the 2077 game? :)<br>
 You most likely have known about such technology as ChatGPT and neural networks in general for a long time. But what if there was more variety in your favorite game? For example, if the game was connected to neural networks. Sounds interesting, doesnt it?<br>
 
 This plugin was created in order to demonstrate how fun it is to play with neural networks while in such an old game.<br>
-You can watch the [video]() to see how this plugin works.
+You can watch the [video](https://youtu.be/9-A0KLn1jPc) to see how this plugin works.
 
 # Installation
 The entire installation stage of this plugin will consist of the following steps:<br>
@@ -17,7 +17,7 @@ The entire installation stage of this plugin will consist of the following steps
 6. After you click on the green `Create secret key` button you will see a new window with the following text: `Please save this secret key somewhere safe and accessible. For security reasons, you won't be able to view it again through your OpenAI account. If you lose this secret key, you'll need to generate a new one.`;
 7. You will have to copy your key. It will look something like this: `sk-7pgTYp1fYhDqGRTTU3xET5BlbkFJ3EoSRAsJCn125MjjZQXJ`;
 8. Keep the key in a safe place as we will need it later;
-9. Now, download the [release]() version of the plugin;
+9. Now, download the [release](https://github.com/kekekekkek/NeuroChat/releases/tag/v0.1) version of the plugin;
 10. Place all files and the main `NeuroChat.dll` module in the game directory according to these [instructions](https://github.com/sw1ft747/svenmod#svenmod) for SvenMod and its plugins;
 11. After completing all the steps, launch your SvenMod launcher;
 12. If you have installed the plugin correctly, then after launching SvenMod, you will be able to see the following messages in the console: `[NeuroChat] Successfully loaded!` and `[SvenMod] Loaded plugin "NeuroChat"`;
