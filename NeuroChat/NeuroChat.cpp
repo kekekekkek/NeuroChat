@@ -59,7 +59,6 @@ void WriteChatHistory(string strText)
 	}
 }
 
-//This hook can crash when a player is disconnected from the server, as it does not take into account his presence
 int SayTextHook(const char* pszName, int iSize, void* pBuffer)
 {
 	CMessageBuffer cmbBuffer(pBuffer, iSize, true);
