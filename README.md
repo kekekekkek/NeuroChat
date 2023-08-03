@@ -19,7 +19,7 @@ The entire installation stage of this plugin will consist of the following steps
 6. After you click on the green `Create secret key` button you will see a new window with the following text: `Please save this secret key somewhere safe and accessible. For security reasons, you won't be able to view it again through your OpenAI account. If you lose this secret key, you'll need to generate a new one.`;
 7. You will have to copy your key. It will look something like this: `sk-7pgTYp1fYhDqGRTTU3xET5BlbkFJ3EoSRAsJCn125MjjZQXJ`;
 8. Keep the key in a safe place as we will need it later;
-9. Now, download the [release](https://github.com/kekekekkek/NeuroChat/releases/tag/v0.1) version of the plugin;
+9. Now, download the [release](https://github.com/kekekekkek/NeuroChat/releases/tag/v0.2) version of the plugin;
 10. Place all files and the main `NeuroChat.dll` module in the game directory according to these [instructions](https://github.com/sw1ft747/svenmod#svenmod) for SvenMod and its plugins;
 11. After completing all the steps, launch your SvenMod launcher;
 12. If you have installed the plugin correctly, then after launching SvenMod, you will be able to see the following messages in the console: `[NeuroChat] Successfully loaded!` and `[SvenMod] Loaded plugin "NeuroChat"`;
