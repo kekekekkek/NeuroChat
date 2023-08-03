@@ -8,3 +8,4 @@ extern void CreateConfig();
 extern void ResetConfig();
 extern void LoadConfig();
 extern void SaveConfig();
+extern void ResetToDefault(string strKeyName);

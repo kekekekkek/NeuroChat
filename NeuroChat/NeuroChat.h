@@ -4,7 +4,8 @@ extern UserMsgHookFn OrigSayTextHook;
 extern DetourHandle_t dhHandle;
 
 extern ConVar neurochat;
-extern ConVar nc_playerhint;
+extern ConVar nc_showhint;
+extern ConVar nc_showerror;
 extern ConVar nc_chathistory;
 extern ConVar nc_setkey;
 extern ConVar nc_addstr;

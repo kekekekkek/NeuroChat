@@ -83,7 +83,8 @@ int SayTextHook(const char* pszName, int iSize, void* pBuffer)
 
 				//Ignore some garbage messages
 				if (IndexOf(strText, "has joined the game.") != -1
-					|| IndexOf(strText, "has left the game.") != -1)
+					|| IndexOf(strText, "has left the game.") != -1
+					|| IndexOf(strText, "has finished loading.") != -1)
 					break;
 
 				//If the name is not empty
@@ -92,8 +93,10 @@ int SayTextHook(const char* pszName, int iSize, void* pBuffer)
 					strText.erase(IndexOf(strText, hpitPlayerInfo.name) - 1, strlen(hpitPlayerInfo.name) + 2);
 
 				//Sending a hint to the players
-				if (nc_playerhint.GetBool())
+				if (nc_showhint.GetBool())
 					g_pEngineFuncs->ClientCmd("say Request in process, please wait...");
+				else
+					ConMsg("[NeuroChat] Request in process, please wait...\n");
 
 				//Write chat history in txt file
 				if (nc_chathistory.GetBool())
