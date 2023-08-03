@@ -105,6 +105,10 @@ You can read more information about neural networks and models from OpenAI here:
 
 # Screenshots
 Also, you can write messages not only in English, but also in other languages that the neural network supports.
+* English<br><br>
+![Screenshot_1](https://github.com/kekekekkek/NeuroChat/blob/main/Images/Screenshot_1.png)
+* Russian<br><br>
+![Screenshot_2](https://github.com/kekekekkek/NeuroChat/blob/main/Images/Screenshot_2.png)
 
 # Conclusion
 Perhaps i missed something and forgot to write about it, but here i have outlined the basic things that you will need to know about this plugin. You can also use a neural network on your local computer, if you have a powerful enough one, and link it to this plugin. This is just a concept of how fun it is to combine a neural network with different digital things :)
