@@ -95,8 +95,6 @@ void ResetConfig()
 
 void ResetToDefault(string strKeyName)
 {
-	char chValue[MAX_PATH];
-
 	for (int i = 0; i < ARRAYSIZE(strKeys); i++)
 	{
 		if (strstr(strKeyName.c_str(), strKeys[i].c_str()))
