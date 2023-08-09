@@ -44,6 +44,8 @@ Also, after launching the game, a directory named `NeuroChat` will appear in the
 * The file `Config.ini` will store all the values of the registered console commands.
 * The file `History.txt ` will store all user requests and responses to them.
 
+P.S: Also, im so stupid because i made configuration system in this plugin lol. You just can use `.cfg` file with specified console variables like that: `exec NeuroChat.cfg`. I didnt think about the `.cfg` files when i did it.
+
 Now that your game is running, you will need to enter your OpenAI key. To do this, you need to open the game console and enter the following command in it: `nc_setkey + %OpenAIKey%`.<br><br>
 Your end result should look something like this: `nc_setkey sk-7pgTYp1fYhDqGRTTU3xET5BlbkFJ3EoSRAsJCn125MjjZQXJ`. Also, you can change your key at any other time without starting the game. You just need to open the file `../NeuroChat/Config.ini` and edit the parameter `NC_OpenAIKey`.
 
